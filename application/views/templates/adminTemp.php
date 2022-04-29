@@ -43,8 +43,8 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="https://marquinhosveiculos.com.br/image/cache/catalog/SITE/LOGOMARCA-500x122_0-500x122.jpg" alt="">
+      <a href="<?php echo base_url();?>index.php/produto" class="logo d-flex align-items-center">
+        <img src="https://img.freepik.com/fotos-gratis/retrato-de-padeiro-adulto-jovem-satisfeito-com-barba-longa-em-uniforme-branco-permanente-em-seu-local-de-trabalho-perto-de-prateleiras-com-pao-na-fabricacao-de-padaria-interior-olhando-para-a-camera-conceito-de-profissao_416530-22547.jpg?w=2000" alt="">
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -271,13 +271,6 @@
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="<?php echo base_url();?>index.php">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed"  href="<?php echo base_url();?>index.php/produto">

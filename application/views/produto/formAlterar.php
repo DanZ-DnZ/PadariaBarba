@@ -15,7 +15,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Produto</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" name="prdotuo" value="<?php echo $produto->produto; ?>" required />
+                                <input class="form-control" type="text" name="produto" value="<?php echo $produto->produto; ?>" required />
                             </div>
                         </div>
                         <fieldset class="row mb-3">
@@ -47,6 +47,12 @@
                                 <select name="tipo_produto" class="form-select" required>
                                     <?php echo $opcoes; ?>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Imagem</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="text" name="imagem" value="<?php echo $produto->imagem; ?>" required />
                             </div>
                         </div>
                         <div class="text-center">

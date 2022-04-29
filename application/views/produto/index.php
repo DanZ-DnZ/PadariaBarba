@@ -8,6 +8,7 @@
             <td>Perecível ?</td>
             <td>Preço</td>
             <td>Tipo</td>
+            <td>Foto</td>
         </tr>
     </thead>
     <?php

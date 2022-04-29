@@ -39,6 +39,9 @@ class Produto extends CI_Controller
                         <td>" . ($item->perecivel == 1 ? "Sim" : "Não") . "</td>
                         <td>" . $item->valor . "</td>
                         <td>" . $item->tipo_produto . "</td>
+                        <td>
+                            <img src= '" . $item->imagem . "' style = 'width:100px' />
+                        </td>
                     </tr>
                 ";
         }
@@ -59,12 +62,14 @@ class Produto extends CI_Controller
         $perecivel = $_POST['perecivel'];
         $valor = $_POST['valor'];
         $tipo = $_POST['tipo_produto'];
+        $imagem = $_POST['imagem'];
 
         $data = array(
             "produto" => $produto,
             "perecivel" => $perecivel,
             "valor" => $valor,
-            "tipo_produto" => $tipo
+            "tipo_produto" => $tipo,
+            "imagem" => $imagem
         );
         $this->ProdutoModel->inserir($data);
         header('location: /codeigniter/index.php/produto');
@@ -119,12 +124,14 @@ class Produto extends CI_Controller
         $perecivel = $_POST['perecivel'];
         $valor = $_POST['valor'];
         $tipo = $_POST['tipo_produto'];
+        $imagem = $_POST['imagem'];
 
         $data = array(
             "produto" => $produto,
             "perecivel" => $perecivel,
             "valor" => $valor,
-            "tipo_produto" => $tipo
+            "tipo_produto" => $tipo,
+            "imagem" => $imagem
         );
 
         $retorno = $this->ProdutoModel->salvaralteracao($data, $id);
