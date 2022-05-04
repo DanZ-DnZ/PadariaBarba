@@ -49,7 +49,7 @@
         <h1>Padaria do Barba</h1>
       </a>
 
-      
+
 
       <div class="position-relative">
         <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
@@ -118,7 +118,9 @@
           </div>
 
         </div> <!-- End .row -->
+        <?php echo $contents; ?>
       </div>
+      
     </section> <!-- End Post Grid Section -->
 
   </main><!-- End #main -->
