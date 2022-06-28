@@ -52,7 +52,7 @@ or simply
 
 This will sign your commits with the information setup in your git config, e.g.
 
-`Signed-off-by: John Q Public <john.public@example.com>`
+`Signead-off-by: John Q Public <john.public@example.com>`
 
 If you are using [Tower](http://www.git-tower.com/) there is a "Sign-Off" checkbox in the commit window. You could even alias git commit to use the `-s` flag so you don’t have to think about it.
 
