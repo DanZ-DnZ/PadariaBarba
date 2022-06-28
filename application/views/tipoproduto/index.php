@@ -1,5 +1,5 @@
 <h1>Lista de tipos de produto da padaria</h1>
-<a href="/codeigniter/index.php/tipoProduto/formnovo" class="btn btn-primary">Novo</a>
+<a href="/tipoProduto/formnovo" class="btn btn-primary">Novo</a>
 
 <table class="table table-striped">
     <thead>

@@ -5,7 +5,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Adicionar novo produto</h5>
 
-                    <form method="Post" action="http://127.0.0.1/codeigniter/index.php/produto/novo">
+                    <form method="Post" action="http://127.0.0.1:8080/produto/novo">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Nome</label>
                             <div class="col-sm-10">
@@ -53,7 +53,7 @@
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Salvar</button>
                             <button type="reset" class="btn btn-secondary">Limpar</button>
-                            <a class="btn btn-secondary" href='http://127.0.0.1/codeigniter/index.php/produto'> Voltar/Cancelar</a>
+                            <a class="btn btn-secondary" href='http://127.0.0.1:8080/codeigniter/index.php/produto'> Voltar/Cancelar</a>
                         </div>
                         <!--<input type="file" multiple name="arquivos">-->
                     </form>

@@ -10,7 +10,7 @@ class Produto extends CI_Controller
         $this->load->model("TipoProdutoModel");
         if (!isset($_SESSION["tesi2022"])) {
             echo "você precisa estar logado";
-            header("location: http://127.0.0.1/codeigniter/index.php/login/");
+            header("location: http://127.0.0.1:8080/login/");
         }
     }
 
@@ -26,10 +26,10 @@ class Produto extends CI_Controller
             if (isset($_SESSION["tesi2022"])) {
                 $tabela .= "
                 <td style='cursor: pointer'>
-                    <a href='/codeigniter/index.php/produto/alterar?codigo=" . $item->id . "'>
+                    <a href='/produto/alterar?codigo=" . $item->id . "'>
                     ✏️
                     </a>
-                    <a href='/codeigniter/index.php/produto/excluir?codigo=" . $item->id . "'>
+                    <a href='/produto/excluir?codigo=" . $item->id . "'>
                     ❌
                     </a>
                 </td>";
@@ -72,7 +72,7 @@ class Produto extends CI_Controller
             "imagem" => $imagem
         );
         $this->ProdutoModel->inserir($data);
-        header('location: /codeigniter/index.php/produto');
+        header('location: /produto');
     }
 
     public function formNovo()
@@ -111,7 +111,7 @@ class Produto extends CI_Controller
         $retorno = $this->ProdutoModel->excluir($id);
 
         if ($retorno) {
-            header('location: /codeigniter/index.php/produto');
+            header('location: /produto');
         } else {
             echo "houve erro na alteração";
         }
@@ -137,7 +137,7 @@ class Produto extends CI_Controller
         $retorno = $this->ProdutoModel->salvaralteracao($data, $id);
 
         if ($retorno) {
-            header('location: /codeigniter/index.php/produto');
+            header('location: /produto');
         } else {
             echo "houve erro na alteração";
         }

@@ -5,11 +5,11 @@
                 <div class="card-body">
                     <h5 class="card-title">Alterar Tipo produto</h5>
 
-                    <form method="Post" action="http://127.0.0.1/codeigniter/index.php/tipoproduto/salvaralteracao">
+                    <form method="Post" action="http://127.0.0.1:8080/tipoproduto/salvaralteracao">
                         <div class="row mb-3" hidden>
                             <label class="col-sm-2 col-form-label">id</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text" name="id" value="<?php echo $tipoProduto->id; ?>"  />
+                                <input class="form-control" type="text" name="id" value="<?php echo $tipoProduto->id; ?>" />
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -21,7 +21,7 @@
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Salvar</button>
                             <button type="reset" class="btn btn-secondary">Limpar</button>
-                            <a class="btn btn-secondary" href='http://127.0.0.1/codeigniter/index.php/tipoproduto'> Voltar/Cancelar</a>
+                            <a class="btn btn-secondary" href='http://127.0.0.1:8080/tipoproduto'> Voltar/Cancelar</a>
                         </div>
                     </form>
 

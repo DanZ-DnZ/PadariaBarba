@@ -34,7 +34,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" method = "POST" action = "http://127.0.0.1/codeigniter/index.php/login/salvarRegistro">
+                            <form class="user" method="POST" action="http://127.0.0.1:8080/login/salvarRegistro">
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="nome" placeholder="First Name" name="nome">
                                 </div>
@@ -51,7 +51,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
                                     Register Account
-                            </button>
+                                </button>
                             </form>
                             <hr>
                             <div class="text-center">

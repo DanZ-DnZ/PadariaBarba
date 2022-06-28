@@ -11,12 +11,12 @@ class TipoProduto extends CI_Controller
 
         if (!isset($_SESSION["tesi2022"])) {
             echo "você precisa estar logado";
-            header("location: http://127.0.0.1/codeigniter/index.php/login/");
+            header("location: http://127.0.0.1/login/");
         }
     }
     public function index()
     {
-        
+
 
         $tipoProduto = $this->TipoProdutoModel->selecionarTodos();
         $tabela = "";
@@ -26,10 +26,10 @@ class TipoProduto extends CI_Controller
             if (isset($_SESSION["tesi2022"])) {
                 $tabela .= "
                 <td style='cursor: pointer'>
-                    <a href='/codeigniter/index.php/tipoproduto/alterar?codigo=" . $item->id . "'>
+                    <a href='/tipoproduto/alterar?codigo=" . $item->id . "'>
                     ✏️
                     </a>
-                    <a href='/codeigniter/index.php/tipoproduto/excluir?codigo=" . $item->id . "'>
+                    <a href='/tipoproduto/excluir?codigo=" . $item->id . "'>
                     ❌
                     </a>
                 </td>";
@@ -53,19 +53,19 @@ class TipoProduto extends CI_Controller
     {
         $nome = $_POST['nome'];
         $achouProduto = $this->TipoProdutoModel->buscarTipo($nome);
-        if (sizeof($achouProduto) > 0){
+        if (sizeof($achouProduto) > 0) {
             echo "<script>alert('Tipo ja existe')</script>";
             $this->template->load("templates/adminTemp", "tipoproduto/formNovo");
             return;
         }
-        
+
         $data = array(
             "nome" => $nome
         );
         $retorno = $this->TipoProdutoModel->inserir($data);
         if ($retorno) {
             echo "<script>alert('Cadastrado')</script>";
-            header('location: /codeigniter/index.php/tipoproduto');
+            header('location: /tipoproduto');
         } else {
             echo "<script>alert('houve erro na alteração')</script>";
             $this->template->load("templates/adminTemp", "tipoproduto/formNovo");
@@ -98,7 +98,7 @@ class TipoProduto extends CI_Controller
             "tipoProduto" => $retorno[0],
             "titulo" => "Alteração de tipos"
         );
-        if (sizeof($achouProduto) > 0){
+        if (sizeof($achouProduto) > 0) {
             echo "<script>alert('Tipo já Existe')</script>";
             $this->template->load("templates/adminTemp", "tipoproduto/formAlterar", $data);
             return;
@@ -111,7 +111,7 @@ class TipoProduto extends CI_Controller
         $retorno = $this->TipoProdutoModel->salvaralteracao($data, $id);
 
         if ($retorno) {
-            header('location: /codeigniter/index.php/tipoproduto');
+            header('location: /tipoproduto');
         } else {
             echo "houve erro na alteração";
         }
@@ -119,7 +119,7 @@ class TipoProduto extends CI_Controller
 
     public function formNovo()
     {
-        
+
         $this->template->load("templates/adminTemp", "tipoproduto/formNovo");
     }
 
@@ -132,7 +132,7 @@ class TipoProduto extends CI_Controller
         $retorno = $this->TipoProdutoModel->excluir($id);
 
         if ($retorno) {
-            header('location: /codeigniter/index.php/tipoproduto');
+            header('location: /tipoproduto');
         } else {
             echo "houve erro na alteração";
         }

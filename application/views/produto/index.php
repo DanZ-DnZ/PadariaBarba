@@ -1,5 +1,5 @@
 <h1>Lista de produtos</h1>
-<a href="/codeigniter/index.php/produto/formnovo" class="btn btn-primary">Novo</a>
+<a href="/produto/formnovo" class="btn btn-primary">Novo</a>
 <table class="table table-striped">
     <thead>
         <tr>

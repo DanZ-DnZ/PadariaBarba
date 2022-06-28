@@ -5,7 +5,7 @@ class Login extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        
+
         $this->load->model("LoginModel");
     }
 
@@ -20,33 +20,32 @@ class Login extends CI_Controller
 
         //$this->load->model("LoginModel");
         $retorno = $this->LoginModel->registrar($data);
-        if ($retorno){
+        if ($retorno) {
             echo "<script>
             alert('Usuário cadastrado com sucesso!');
             </script>";
-            $this->template->load("templates/login",'login/login');
-        }
-        else{
+            $this->template->load("templates/login", 'login/login');
+        } else {
             echo "<script>
             alert('Erro ao cadastrar usuário');
             </script>";
         }
-            
     }
 
     public function registro()
     {
-        $this->template->load("templates/register",'login/registrarSenha');
+        $this->template->load("templates/register", 'login/registrarSenha');
     }
 
 
     public function index()
     {
-        $this->template->load("templates/login",'login/login');
+        $this->template->load("templates/login", 'login/login');
     }
 
 
-    public function validaLogin(){
+    public function validaLogin()
+    {
         $email = $_POST["email"];
         $senha = $_POST["senha"];
 
@@ -54,22 +53,23 @@ class Login extends CI_Controller
 
         $retorno = $this->LoginModel->ValidaLogin($email, $senha);
 
-        if ($retorno){
+        if ($retorno) {
             $_SESSION["tesi2022"] = array(
                 "email" => $email,
                 "admin" => true
             );
-            header("location: http://127.0.0.1/codeigniter/index.php/produto"); 
+            header("location: http://127.0.0.1:8080/produto");
         } else {
             echo "<script>
             alert('Usuário ou senha inválidos');
             </script>";
-            $this->template->load("templates/login",'login/login');
+            $this->template->load("templates/login", 'login/login');
         }
     }
 
-    public function deslogar () {
+    public function deslogar()
+    {
         unset($_SESSION["tesi2022"]);
-        header("location: http://127.0.0.1/codeigniter/index.php/login/ ");
+        header("location: http://127.0.0.1:8080/login/ ");
     }
 }
